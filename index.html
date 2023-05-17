@@ -11,14 +11,25 @@
     <main>
         <section id="login">
             <div id="imagem">
-
+                
             </div>
 
             <div id="formulario">
                 <h1>login</h1>
                 <p>Seja Bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+                <form id="email" action="login.php" method="post">
+                    <label for="ilog">Login</label>
+                    <input type="email" name="Login" id="ilog" placeholder="Seu e-mail">
+                </form>
+                <form id="senha" action="login.php" method="post">
+                    <label for="isen">Senha</label>
+                    <input type="password" name="Senha" id="isen" placeholder="Sua senha">
+                </form>
                 <form action="login.php" method="post">
-                    
+                    <input id="entrar" type="submit" value="Entrar">
+                </form>
+                <form action="login.php" method="post">
+                    <input id="esqueci" type="submit" value="Esqueci a senha">
                 </form>
             </div>
         </section>
