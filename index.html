@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <main>
@@ -17,19 +19,24 @@
             <div id="formulario">
                 <h1>login</h1>
                 <p>Seja Bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form id="email" action="login.php" method="post">
-                    <label for="ilog">Login</label>
-                    <input type="email" name="Login" id="ilog" placeholder="Seu e-mail">
-                </form>
-                <form id="senha" action="login.php" method="post">
-                    <label for="isen">Senha</label>
-                    <input type="password" name="Senha" id="isen" placeholder="Sua senha">
-                </form>
-                <form action="login.php" method="post">
-                    <input id="entrar" type="submit" value="Entrar">
-                </form>
-                <form action="login.php" method="post">
-                    <input id="esqueci" type="submit" value="Esqueci a senha">
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <i class="material-icons">person</i>
+                        <input type="email" name="login" id="ilog" placeholder="Seu e-mail" autocomplete="on" required maxlength="30">
+                        <label for="ilog"></label>
+                    </div>
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" name="senha" id="isen" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="isen"></label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Entrar">
+                        <a href="esqueci.html">
+                            Esqueci a senha <i class="material-icons">mail</i>
+                        </a>
+                    </div>
+                    
                 </form>
             </div>
         </section>
